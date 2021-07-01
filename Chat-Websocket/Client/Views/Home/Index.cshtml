@@ -1,0 +1,56 @@
+﻿<div class="row" id="box-chat">
+    <div class="col-3 pt-2">
+        <div class="form-group mb-1">
+            <input type="text" id="textName" class="form-control form-control-sm" placeholder="Digite seu nome para entrar" />
+            <small id="helpName" class="form-text text-danger" style="display:none"></small>
+        </div>
+    </div>
+    <div class="col-3 pt-2">
+        <button id="connectButton" class="btn btn-primary btn-sm">Entrar</button>
+    </div>
+    <div class="col-6 pt-2">
+        <button type="button" class="btn btn-sm btn-dark float-right" data-toggle="modal" data-target="#help-modal">Ajuda</button>
+    </div>
+
+    <div class="col-12">
+        <div id="messages" class="mb-1"></div>
+
+        <div class="row mb-2" id="input-message">
+            <div class="col-10 pb-2">
+                <div class="form-group">
+                    <input type="text" id="textMessage" class="form-control form-control-sm" placeholder="Digite sua mensagem" disabled="disabled" />
+                </div>
+            </div>
+            <div class="col-2 pb-2">
+                <button id="sendButton" class="btn btn-primary btn-sm btn-block" disabled="disabled">Enviar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="help-modal" tabindex="-1" role="dialog" aria-labelledby="helpModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="helpModal">Ajuda</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="mb-1">Você pode enviar uma mensagem pública para todos na sala:</p>
+                <p class="ml-4">Olá pessoal, como vocês estão?</p>
+                <hr class="my-4">
+
+                <p class="mb-1">Você pode enviar uma mensagem pública mensionando outro usuário:</p>
+                <p class="ml-4">@("@")Nome Olá, como vai você?</p>
+
+                <hr class="my-4">
+
+                <p class="mb-1">Você pode enviar uma mensagem privada para uma pessoa da sala:</p>
+                <p class="ml-4">/p @("@")Nome Olá, preciso te contar um segredo.</p>
+                <hr class="my-4">
+            </div>
+        </div>
+    </div>
+</div>
